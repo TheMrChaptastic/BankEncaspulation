@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankEncapsulation
 {
-    internal class BankAccount
+    public class BankAccount
     {
         private double balance = 0;
 
