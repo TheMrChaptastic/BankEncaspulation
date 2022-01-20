@@ -10,12 +10,21 @@ namespace BankEncapsulation
 
         public double Balance
         {
-            get { return balance; }
+            get { return Math.Round(balance, 2); }
         }
 
         public void Deposit(double ammount)
         {
-            balance = ammount;
+            balance += ammount;
+        }
+
+        public void Withdraw(double ammount)
+        {
+            if (ammount < balance)
+            {
+                balance -= ammount;
+            }
+            else Console.WriteLine("Not enough in account");
         }
     }
 }

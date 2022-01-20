@@ -10,6 +10,10 @@ namespace BankEncapsulation
             Console.WriteLine(myAcc.Balance);
             myAcc.Deposit(120.01);
             Console.WriteLine(myAcc.Balance);
+            myAcc.Withdraw(120);
+            Console.WriteLine(myAcc.Balance);
+            myAcc.Withdraw(120);
+            Console.WriteLine(myAcc.Balance);
         }
     }
 }
