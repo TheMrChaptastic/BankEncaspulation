@@ -6,25 +6,26 @@ namespace BankEncapsulation
 {
     public class BankAccount
     {
-        private double balance = 0;
+        private double _balance = 0;
 
         public double Balance
         {
-            get { return Math.Round(balance, 2); }
+            get { return Math.Round(_balance, 2); }
         }
 
         public void Deposit(double ammount)
         {
-            balance += ammount;
+            _balance += ammount;
+            Console.WriteLine($"Current Balance after Deposit ${Math.Round(_balance, 2)}");
         }
 
         public void Withdraw(double ammount)
         {
-            if (ammount < balance)
+            if (ammount < _balance)
             {
-                balance -= ammount;
+                _balance -= ammount;
             }
-            else Console.WriteLine("Not enough in account");
+            else Console.WriteLine($"Not enough in account (Current Balance is ${Math.Round(_balance, 2)})");
         }
     }
 }
